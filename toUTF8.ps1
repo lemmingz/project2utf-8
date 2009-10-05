@@ -1,0 +1,1 @@
+Get-ChildItem . -include *.php,*.css -Recurse | foreach {get-content $_ | out-file -filePath $_.fullname.insert(2, "\neu\") -encoding "UTF8" -force}
